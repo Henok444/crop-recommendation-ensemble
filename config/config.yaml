@@ -1,0 +1,10 @@
+data:
+  test_size: 0.2 
+  random_state: 42 
+random_forest:
+  n_estimator: 300
+  max_depth: 10 
+  random_state: 42
+model :
+  path: "models/random_forest.pkl"
+
