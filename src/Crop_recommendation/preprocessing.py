@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 feature = ['N' , "P" , "K" , "temperature" , "humidity" , "ph" , "rainfall" ]
-target = ["label"]
+target = "label"
 
 
 
