@@ -5,7 +5,7 @@ from sklearn.metrics import (
     f1_score
 )
 
-def evalute_model(X_test , y_test , model ):
+def evaluate_model(X_test , y_test , model ):
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_pred=y_pred , y_true=y_test)
     weighted_f1 = f1_score(y_pred=y_pred , y_true=y_test , average="weighted")
