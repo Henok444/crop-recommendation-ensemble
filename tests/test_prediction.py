@@ -20,7 +20,7 @@ features = {
 
 
 def test_prediction():
-    model = load_model(config["model"]["path"])
+    model = load_model(config["trained_model"]["random_forest_path"])
     prediction = predict(model , features)
 
     assert isinstance(prediction , str)
