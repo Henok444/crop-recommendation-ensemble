@@ -2,8 +2,16 @@ from src.Crop_recommendation.data import load_data
 from src.Crop_recommendation.preprocessing import preprocess
 from src.Crop_recommendation.preprocessing import split
 from src.Crop_recommendation.config import load_config
+from src.Crop_recommendation.preprocessing import encode
+import numpy as np 
 
 config = load_config()
+
+def test_encode():
+    df = load_data()
+    data = encode(df)
+
+    assert isinstance(data["label"].iloc[0] , (int , float, np.number)) == True 
 
 def test_preprocess():
     df = load_data()
