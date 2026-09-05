@@ -5,6 +5,15 @@ random_forest:
   n_estimator: 300
   max_depth: 10 
   random_state: 42
-model :
-  path: "models/random_forest.pkl"
+xg_boost:
+  learning_rate: 0.1
+  gamma: 0               
+  n_estimators: 500        
+  early_stopping_rounds: 20 
+  random_state: 42
+trained_model:
+  random_forest_path: "models/random_forest.pkl"
+  xg_boost_path: "models/xg_boost.pkl"
+encoder:
+  path: "models/encoded_label.pkl"
 
