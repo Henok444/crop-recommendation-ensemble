@@ -7,7 +7,7 @@ config = load_config()
 
 def test_random_forest_tuning():
     df = load_data()
-    df_encode = encode(df)
+    df_encode  , lr= encode(df)
     X , y = preprocess(df_encode)
 
 
