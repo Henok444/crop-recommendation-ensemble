@@ -8,7 +8,7 @@ from src.Crop_recommendation.preprocessing import encode
 
 
 df = load_data()
-df_encoded = encode(df)
+df_encoded , lr= encode(df)
 X, y = preprocess(df_encoded)
 X_train, X_test, y_train, y_test = split(X, y , test_size= 0.2 , random_state= 42)
 
