@@ -17,9 +17,8 @@ def encode(df):
     le = LabelEncoder()
 
     df['label'] = le.fit_transform(df['label'])
-    path = Path(config["encoder"]["path"] )
-    save_encoded_label(le , path )
-    return df
+    
+    return df , le 
 
 
 def preprocess(df):
