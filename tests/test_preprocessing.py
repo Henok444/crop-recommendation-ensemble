@@ -9,7 +9,7 @@ config = load_config()
 
 def test_encode():
     df = load_data()
-    data = encode(df)
+    data , lr = encode(df)
 
     assert isinstance(data["label"].iloc[0] , (int , float, np.number)) == True 
 
