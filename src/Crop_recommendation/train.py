@@ -6,6 +6,7 @@ from src.Crop_recommendation.evaluation import evalute_model
 from src.Crop_recommendation.config import load_config
 from src.Crop_recommendation.model_io import save_model
 from src.Crop_recommendation.preprocessing import encode
+from src.Crop_recommendation.preprocessing_io import save_encoded_label
 from pathlib import Path
 
 
@@ -15,7 +16,10 @@ def train_rm():
     config = load_config()
 
     data = load_data()
-    encoded_data = encode(data)
+    encoded_data , le = encode(data)
+    
+    path = Path(config["encoder"]["path"] )
+    save_encoded_label(le , path )
 
     X , y = preprocess(encoded_data)
 
