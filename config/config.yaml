@@ -16,4 +16,9 @@ trained_model:
   xg_boost_path: "models/xg_boost.pkl"
 encoder:
   path: "models/encoded_label.pkl"
-
+tuning: 
+  random_forest: 
+    n_estimators: [10 , 50 ,100 , 300]
+    max_depth: [3 , 5 , 7 ,10 ]
+    cv: 5
+    scoring: "f1_weighted"
