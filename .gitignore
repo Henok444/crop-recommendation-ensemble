@@ -8,3 +8,4 @@ test.py
 *git 
 *.pkl
 *json
+*.ipynb_checkpoints
