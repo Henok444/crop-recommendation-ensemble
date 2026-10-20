@@ -1,7 +1,7 @@
 import pandas as pd 
 from src.Crop_recommendation.validation import validate_features
 from src.Crop_recommendation.config import load_config
-from src.Crop_recommendation.model_io import load_encoder
+from src.Crop_recommendation.preprocessing_io import load_encoder
 
 config = load_config()
 
