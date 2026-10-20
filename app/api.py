@@ -1,3 +1,4 @@
+
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
@@ -12,8 +13,9 @@ app = FastAPI(
     version="1.0.0",
 )
 
+BASE = Path(__file__).resolve().parents[1]
 
-MODEL_PATH = Path("models/random_forest.pkl")
+MODEL_PATH = BASE / "models" /"random_forest.pkl"
 
 model = load_model(MODEL_PATH)
 
@@ -21,7 +23,7 @@ model = load_model(MODEL_PATH)
 @app.get("/health")
 def health_check():
     return {
-        "status": "healthy",
+        "status": "healthy"
     }
 
 
