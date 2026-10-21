@@ -67,7 +67,7 @@ Dockerfile -- Instructions for building the container image.
 
 requirements.txt -- Python dependencies.
 
-# Set up guid 
+# Set up guide 
 
 
 git clone https://github.com/Henok444/crop-recommendation-ensemble.git
