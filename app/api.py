@@ -19,6 +19,16 @@ MODEL_PATH = BASE / "models" /"random_forest.pkl"
 
 model = load_model(MODEL_PATH)
 
+@app.get("/")
+def root():
+    return {
+        "project": "Crop Recommendation API",
+        "message": "Welcome to the Crop Recommendation API!",
+        "status": "running",
+        "docs": "/docs",
+        "health": "/health"
+    }
+
 
 @app.get("/health")
 def health_check():
